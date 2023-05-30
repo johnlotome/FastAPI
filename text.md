@@ -11,3 +11,6 @@ Can perform all db operations through traditional python code. No SQL !!
 Use python models to define tables 
 
 Sqlalchemy is one of the most popular python ORMS
+
+
+query_param --- {{URL}}/posts?limit=3&skip=1&search=to%20Fun
