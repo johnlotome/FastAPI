@@ -1,11 +1,11 @@
 from jose import jwt, JWTError
-import schema
+from . import schema
 from datetime import datetime, timedelta
 from fastapi import Depends, status, HTTPException
 from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
-import database, models
-from config import settings
+from . import database, models
+from .config import settings
 
 
 
