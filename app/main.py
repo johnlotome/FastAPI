@@ -30,6 +30,6 @@ app.include_router(vote.router)
 #Path operator 
 @app.get("/")    #Decorator - turns the function below to a path operator. The /indicates the root path
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Hello World2"}
 
 
