@@ -3,7 +3,7 @@ from os import path
 
 class Settings(BaseSettings):
     DATABASE_URL: str
-    DATABASE_PORT: str
+    DATABASE_PORT: int
     DATABASE_PASSWORD: str
     DATABASE_NAME: str
     DATABASE_USERNAME: str
