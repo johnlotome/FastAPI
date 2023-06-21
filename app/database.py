@@ -12,7 +12,7 @@ from .config import settings
 
 
 
-uri = {settings.DATABASE_URL}
+uri = f'{settings.DATABASE_URL}'
 if uri and uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://", 1)
 
