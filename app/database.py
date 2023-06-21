@@ -12,8 +12,11 @@ from .config import settings
 
 
 
+uri = {settings.DATABASE_URL}
+if uri and uri.startswith("postgres://"):
+    uri = uri.replace("postgres://", "postgresql://", 1)
 
-engine =  create_engine(settings.DATABASE_URL)
+engine =  create_engine(uri)
 
 # engine =  create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False,bind=engine)

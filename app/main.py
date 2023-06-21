@@ -4,7 +4,7 @@ from .config import settings
 from fastapi.middleware.cors import CORSMiddleware
 
 
-print(settings.DATABASE_URL)
+# print(settings.DATABASE_URL)
 
 # models.Base.metadata.create_all(bind=engine)    ----using alembic instead
 
