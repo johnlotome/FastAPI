@@ -5,10 +5,10 @@ import psycopg2
 from psycopg2.extras import RealDictCursor #To give the column names
 import time
 from .config import settings
-from . import db_utils
+
 
 # SQLALCHEMY_DATABASE_URL = 'postgresql://<username>:<password>@<ip-address/hostname>/<database_name>'
-# SQLALCHEMY_DATABASE_URL = f'postgresql://{settings.DATABASE_USERNAME}:{settings.DATABASE_PASSWORD}@{settings.DATABASE_URL}:{settings.DATABASE_PORT}/{settings.DATABASE_NAME}'
+SQLALCHEMY_DATABASE_URL = f'postgresql://{settings.DATABASE_USERNAME}:{settings.DATABASE_PASSWORD}@{settings.DATABASE_HOSTNAME}:{settings.DATABASE_PORT}/{settings.DATABASE_NAME}'
 # print(SQLALCHEMY_DATABASE_URL)
 
 
@@ -16,11 +16,11 @@ from . import db_utils
 # uri = f'{settings.DATABASE_URL}'
 # if uri and uri.startswith("postgres://"):
 #     uri = uri.replace("postgres://", "postgresql://", 1)
-uri = db_utils.db_url
+# uri = db_utils.db_url
 
-engine =  create_engine(uri)
+# engine =  create_engine(uri)
 
-# engine =  create_engine(SQLALCHEMY_DATABASE_URL)
+engine =  create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False,bind=engine)
 
 Base = declarative_base()
