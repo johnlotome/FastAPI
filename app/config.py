@@ -2,7 +2,7 @@ from pydantic import BaseSettings
 from os import path
 
 class Settings(BaseSettings):
-    DATABASE_URL: str
+    DATABASE_HOSTNAME: str
     DATABASE_PORT: str
     DATABASE_PASSWORD: str
     DATABASE_NAME: str
